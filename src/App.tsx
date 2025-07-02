@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate, HashRouter } from 'react-router-dom'
 import { QuizProvider } from './context/QuizContext'
 
 import Home from './pages/Home'
@@ -9,7 +9,7 @@ import Acerto from './pages/Acerto'
 function App() {
   return (
     <QuizProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/quiz" element={<Pergunta />} />
@@ -17,7 +17,7 @@ function App() {
           <Route path="/acerto" element={<Acerto />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </QuizProvider>
   )
 }
