@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "pergunta": "Qual é a principal formação geográfica que corta o município de Fundão?",
+    "opcoes": ["Serra do Caparaó", "Serra da Boa Vista", "Serra do Mestre Álvaro", "Serra de São José"],
+    "correta": "Serra do Mestre Álvaro"
+  },
+  {
+    "id": 2,
+    "pergunta": "Qual é o nome da praia mais famosa de Fundão?",
+    "opcoes": ["Praia da Baleia", "Praia Grande", "Praia de Iriri", "Praia das Castanheiras"],
+    "correta": "Praia Grande"
+  },
+  {
+    "id": 3,
+    "pergunta": "Em que ano Fundão foi emancipado de Nova Almeida?",
+    "opcoes": ["1889", "1940", "1910", "1923"],
+    "correta": "1923"
+  },
+  {
+    "id": 4,
+    "pergunta": "Qual importante caminho histórico passa por Fundão?",
+    "opcoes": ["Caminho do Ouro", "Rota Imperial", "Caminho dos Tropeiros", "Caminho dos Jesuítas"],
+    "correta": "Caminho dos Jesuítas"
+  },
+  {
+    "id": 5,
+    "pergunta": "Qual fruta é símbolo da cidade e famosa em suas feiras?",
+    "opcoes": ["Banana", "Goiaba", "Mexerica", "Jabuticaba"],
+    "correta": "Mexerica"
+  },
+  {
+    "id": 6,
+    "pergunta": "Qual povo europeu teve forte influência na colonização de Fundão?",
+    "opcoes": ["Espanhóis", "Franceses", "Italianos", "Ingleses"],
+    "correta": "Italianos"
+  },
+  {
+    "id": 7,
+    "pergunta": "Qual rio importante passa pelo município?",
+    "opcoes": ["Rio Doce", "Rio Timbuí", "Rio Fundão", "Rio Jucu"],
+    "correta": "Rio Fundão"
+  },
+  {
+    "id": 8,
+    "pergunta": "Qual atividade econômica é destaque nas comunidades litorâneas de Fundão?",
+    "opcoes": ["Extração mineral", "Pesca artesanal", "Indústria naval", "Apicultura"],
+    "correta": "Pesca artesanal"
+  },
+  {
+    "id": 9,
+    "pergunta": "Qual é o nome da famosa reserva ecológica próxima ao município?",
+    "opcoes": ["Parque da Fonte Grande", "Reserva Biológica de Duas Bocas", "Parque Estadual Pedra Azul", "APA Mestre Álvaro"],
+    "correta": "Reserva Biológica de Duas Bocas"
+  },
+  {
+    "id": 10,
+    "pergunta": "O que significa “Porto da Lama”, nome de uma das praias da cidade?",
+    "opcoes": ["Porto com areia escura", "Porto histórico da escravidão", "Antigo ponto de pesca com manguezais", "Praia de águas termais"],
+    "correta": "Antigo ponto de pesca com manguezais"
+  },
+  {
+    "id": 11,
+    "pergunta": "Qual é uma das construções mais antigas do centro histórico de Fundão?",
+    "opcoes": ["Igreja de Santo Antônio", "Igreja Matriz de São José", "Sobrado do Imperador", "Casa do Prefeito"],
+    "correta": "Igreja Matriz de São José"
+  },
+  {
+    "id": 12,
+    "pergunta": "Quantos distritos tem o município de Fundão?",
+    "opcoes": ["2", "5", "3", "4"],
+    "correta": "3"
+  },
+  {
+    "id": 13,
+    "pergunta": "Qual é o nome de uma tradicional escola pública localizada na sede de Fundão?",
+    "opcoes": ["Colégio Presidente Kennedy", "Escola Estadual Pedro Nolasco", "Escola Estadual Arthur da Costa e Silva", "Escola Nossa Senhora das Graças"],
+    "correta": "Escola Estadual Arthur da Costa e Silva"
+  },
+  {
+    "id": 14,
+    "pergunta": "Que prato típico é comum nas comunidades costeiras de Fundão?",
+    "opcoes": ["Bobó de camarão", "Feijoada com linguiça", "Moqueca capixaba com peixe e banana", "Caldeirada portuguesa"],
+    "correta": "Moqueca capixaba com peixe e banana"
+  },
+  {
+    "id": 15,
+    "pergunta": "Qual festa tradicional acontece todos os anos em Fundão e atrai muitos visitantes?",
+    "opcoes": ["Festa da Cerveja", "Festa da Mexerica", "Festa do Aipim", "Festival do Café"],
+    "correta": "Festa da Mexerica"
+  },
+  {
+    "id": 16,
+    "pergunta": "Quantos quilômetros separam Fundão da capital Vitória?",
+    "opcoes": ["33 km", "85 km", "57 km", "102 km"],
+    "correta": "57 km"
+  },
+  {
+    "id": 17,
+    "pergunta": "Qual cultura agrícola é destaque na região rural de Fundão?",
+    "opcoes": ["Cana-de-açúcar", "Milho", "Café Conilon", "Arroz"],
+    "correta": "Café Conilon"
+  },
+  {
+    "id": 18,
+    "pergunta": "Qual linha ferroviária histórica corta Fundão?",
+    "opcoes": ["Ferrovia Norte-Sul", "Estrada de Ferro Bahia-Minas", "Estrada de Ferro Vitória a Minas (EFVM)", "Ferrovia Transcapixaba"],
+    "correta": "Estrada de Ferro Vitória a Minas (EFVM)"
+  },
+  {
+    "id": 19,
+    "pergunta": "Qual padroeiro é homenageado na principal festa religiosa da cidade?",
+    "opcoes": ["São Pedro", "São José", "Santo Antônio", "São Sebastião"],
+    "correta": "São José"
+  },
+  {
+    "id": 20,
+    "pergunta": "Como é chamada a tradicional prática de roda de causos e histórias nas comunidades do interior de Fundão?",
+    "opcoes": ["Sarau de Vila", "Encontro de Cordel", "Seresta ou roda de prosa", "Cantiga de Boi"],
+    "correta": "Seresta ou roda de prosa"
+  }
+]
