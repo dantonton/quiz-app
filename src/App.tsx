@@ -1,23 +1,29 @@
-import { Routes, Route, Navigate, HashRouter } from 'react-router-dom'
 import { QuizProvider } from './context/QuizContext'
 
 import Home from './pages/Home'
 import Pergunta from './pages/Pergunta'
 import Erro from './pages/Erro'
 import Acerto from './pages/Acerto'
+import { useEffect, useState } from 'react'
 
 function App() {
+  const [tela, setTela] = useState<'home' | 'quiz' | 'erro' | 'acerto'>('home')
+
+  useEffect(() => {
+    const listener = (e: Event) => {
+      const tela = (e as CustomEvent).detail
+      setTela(tela)
+    }
+    window.addEventListener('setTela', listener)
+    return () => window.removeEventListener('setTela', listener)
+  }, [])
+
   return (
     <QuizProvider>
-      <HashRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/quiz" element={<Pergunta />} />
-          <Route path="/erro" element={<Erro />} />
-          <Route path="/acerto" element={<Acerto />} />
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-      </HashRouter>
+      {tela === 'home' && <Home />}
+      {tela === 'quiz' && <Pergunta />}
+      {tela === 'erro' && <Erro />}
+      {tela === 'acerto' && <Acerto />}
     </QuizProvider>
   )
 }

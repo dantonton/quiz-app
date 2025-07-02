@@ -1,25 +1,34 @@
 // src/pages/Pergunta.jsx
-import { useNavigate } from 'react-router-dom'
 import { useQuiz } from '../context/QuizContext'
+import { useState } from 'react'
 import './styles.css'
 
 export default function Pergunta() {
   const { pergunta, avancarPergunta, terminou } = useQuiz()
-  const navigate = useNavigate()
+  const [erro, setErro] = useState(false)
 
-  const handleResposta = (resposta) => {
+  if (!pergunta) return null
+
+  const handleResposta = (resposta: string) => {
     if (resposta === pergunta.correta) {
       if (terminou) {
-        navigate('/acerto')
+        setTela('acerto')
       } else {
         avancarPergunta()
       }
     } else {
-      navigate('/erro')
+      setErro(true)
     }
   }
 
-  if (!pergunta) return null
+  const setTela = (tela: 'home' | 'erro' | 'acerto' | 'quiz') => {
+    window.dispatchEvent(new CustomEvent('setTela', { detail: tela }))
+  }
+
+  if (erro) {
+    setTela('erro')
+    return null
+  }
 
   return (
     <div className="tela fundo">

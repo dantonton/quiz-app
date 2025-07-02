@@ -1,12 +1,8 @@
-// src/pages/Home.jsx
-import { useNavigate } from 'react-router-dom'
 import './styles.css'
 
 export default function Home() {
-  const navigate = useNavigate()
-
   const handleClick = () => {
-    navigate('/quiz')
+    window.dispatchEvent(new CustomEvent('setTela', { detail: 'quiz' }))
   }
 
   return (

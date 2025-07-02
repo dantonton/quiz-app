@@ -1,20 +1,17 @@
-// src/pages/Erro.jsx
-import { useNavigate } from 'react-router-dom'
 import { useQuiz } from '../context/QuizContext'
 import './styles.css'
 
-export default function Erro() {
-  const navigate = useNavigate()
+export default function Acerto() {
   const { resetQuiz } = useQuiz()
 
   const handleClick = () => {
     resetQuiz()
-    navigate('/')
+    window.dispatchEvent(new CustomEvent('setTela', { detail: 'home' }))
   }
 
   return (
     <div className="tela fundo" onClick={handleClick}>
-      <h1 className="titulo">Você errou! Tente novamente.</h1>
+      <h1 className="titulo">Parabéns! Você acertou tudo!</h1>
     </div>
   )
 }
