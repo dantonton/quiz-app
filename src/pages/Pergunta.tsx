@@ -5,7 +5,6 @@ import './styles.css'
 
 export default function Pergunta() {
   const { pergunta, avancarPergunta, terminou, erros } = useQuiz()
-  const [erro, setErro] = useState(false)
   const [selected, setSelected] = useState<string | null>(null)
 
   if (!pergunta) return null
@@ -30,11 +29,6 @@ export default function Pergunta() {
 
   const setTela = (tela: 'home' | 'erro' | 'acerto' | 'quiz') => {
     window.dispatchEvent(new CustomEvent('setTela', { detail: tela }))
-  }
-
-  if (erro) {
-    setTela('erro')
-    return null
   }
 
   return (
