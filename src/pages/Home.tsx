@@ -6,8 +6,7 @@ export default function Home() {
   }
 
   return (
-    <div className="tela fundo" onClick={handleClick}>
-      <h1 className="titulo">Toque para começar</h1>
+    <div className="tela fundo inicio" onClick={handleClick}>
     </div>
   )
 }

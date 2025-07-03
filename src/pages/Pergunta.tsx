@@ -4,21 +4,28 @@ import { useState } from 'react'
 import './styles.css'
 
 export default function Pergunta() {
-  const { pergunta, avancarPergunta, terminou } = useQuiz()
+  const { pergunta, avancarPergunta, terminou, erros } = useQuiz()
   const [erro, setErro] = useState(false)
+  const [selected, setSelected] = useState<string | null>(null)
 
   if (!pergunta) return null
 
   const handleResposta = (resposta: string) => {
-    if (resposta === pergunta.correta) {
+    if(selected) return;
+    setSelected(resposta);
+
+    setTimeout(() => {
+      setSelected('')
+      avancarPergunta(resposta === pergunta.correta)
       if (terminou) {
-        setTela('acerto')
+        if (erros) {
+          setTela('erro')
+        } else {
+          setTela('acerto')
+        }
       } else {
-        avancarPergunta()
       }
-    } else {
-      setErro(true)
-    }
+    }, 1000)
   }
 
   const setTela = (tela: 'home' | 'erro' | 'acerto' | 'quiz') => {
@@ -37,7 +44,7 @@ export default function Pergunta() {
         {pergunta.opcoes.map((opcao, index) => (
           <div
             key={index}
-            className="opcao"
+            className={`opcao ${selected && opcao == pergunta.correta? '--certo':''} ${selected == opcao && opcao != pergunta.correta? '--errado':''}`}
             onClick={() => handleResposta(opcao)}
           >
             {opcao}

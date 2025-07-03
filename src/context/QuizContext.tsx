@@ -12,9 +12,10 @@ export interface Pergunta {
 interface QuizContextType {
   pergunta?: Pergunta
   perguntaAtual: number
-  avancarPergunta: () => void
+  avancarPergunta: (acertou : boolean) => void
   resetQuiz: () => void
-  terminou: boolean
+  terminou: boolean,
+  erros: number
 }
 
 const QuizContext = createContext<QuizContextType | undefined>(undefined)
@@ -26,6 +27,7 @@ function embaralhar<T>(array: T[]): T[] {
 export const QuizProvider = ({ children }: { children: ReactNode }) => {
   const [perguntas, setPerguntas] = useState<Pergunta[]>([])
   const [perguntaAtual, setPerguntaAtual] = useState<number>(0)
+  const [erros, setErros] = useState<number>(0)
 
   useEffect(() => {
     // Sorteia 5 perguntas diferentes ao iniciar
@@ -37,17 +39,19 @@ export const QuizProvider = ({ children }: { children: ReactNode }) => {
     const sorteadas = embaralhar(perguntasJson).slice(0, 5)
     setPerguntas(sorteadas)
     setPerguntaAtual(0)
+    setErros(0)
   }
 
-  const avancarPergunta = () => {
+  const avancarPergunta = (acertou : boolean) => {
     setPerguntaAtual((prev) => prev + 1)
+    setErros((prev) => acertou? prev: prev + 1)
   }
 
   const pergunta = perguntas[perguntaAtual]
   const terminou = perguntaAtual >= perguntas.length - 1
 
   return (
-    <QuizContext.Provider value={{ pergunta, perguntaAtual, avancarPergunta, resetQuiz, terminou }}>
+    <QuizContext.Provider value={{ pergunta, perguntaAtual, avancarPergunta, resetQuiz, terminou, erros }}>
       {children}
     </QuizContext.Provider>
   )

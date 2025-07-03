@@ -10,8 +10,7 @@ export default function Acerto() {
   }
 
   return (
-    <div className="tela fundo" onClick={handleClick}>
-      <h1 className="titulo">Parabéns! Você acertou tudo!</h1>
+    <div className="tela fundo acerto" onClick={handleClick}>
     </div>
   )
 }
