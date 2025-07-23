@@ -1,93 +1,92 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-@font-face {
-  font-family: 'Nunito';
-  src: url('/fonts/nunito/Nunito-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nunito';
-  src: url('/fonts/nunito/Nunito-SemiBold.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nunito';
-  src: url('/fonts/nunito/Nunito-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-
-* {
-  font-family: 'Nunito', sans-serif;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+/* src/styles.css */
+body, html {
   margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100%;
+  background: #111;
+  color: white;
+  user-select: none;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.screen {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  height: 100%;
+  background: #222;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.timer {
+  font-size: 1.5rem;
+  margin: 18rem 0 4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 10px;
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  perspective: 600px;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+  position: absolute;
+}
+
+.card .front {
+  transform: rotateY(180deg);
+}
+
+.card.flipped .front {
+  transform: rotateY(0);
+}
+
+.card.flipped .back {
+  transform: rotateY(180deg);
+}
+
+.card .back {
+  transform: rotateY(0);
+}
+
+
+.fundo {
+  background-image: url('/src/assets/cindes/tela02.png');
+  background-size: cover;
+  background-position: center;
+}
+.fundo.inicio{
+  background-image: url('/src/assets/cindes/tela01.png');
+}
+.fundo.erro{
+  background-image: url('/src/assets/cindes/tela-erro.png');
+}
+.fundo.acerto{
+  background-image: url('/src/assets/cindes/tela-ok.png');
 }

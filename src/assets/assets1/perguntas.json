@@ -2,8 +2,8 @@
   {
     "id": 1,
     "pergunta": "Qual é a principal formação geográfica que corta o município de Fundão?",
-    "opcoes": ["Serra do Caparaó", "Serra da Boa Vista", "Serra do Mestre Álvaro", "Serra de São José"],
-    "correta": "Serra do Mestre Álvaro"
+    "opcoes": ["Serra do Caparaó", "Serra da Boa Vista", "Mestre Álvaro", "Serra de São José"],
+    "correta": "Mestre Álvaro"
   },
   {
     "id": 2,
@@ -14,8 +14,8 @@
   {
     "id": 3,
     "pergunta": "Em que ano Fundão foi emancipado de Nova Almeida?",
-    "opcoes": ["1889", "1940", "1910", "1923"],
-    "correta": "1923"
+    "opcoes": ["1889", "1940", "1910", "1933"],
+    "correta": "1933"
   },
   {
     "id": 4,
@@ -51,7 +51,7 @@
     "id": 9,
     "pergunta": "Qual é o nome da famosa reserva ecológica próxima ao município?",
     "opcoes": ["Parque da Fonte Grande", "Reserva Biológica de Duas Bocas", "Parque Estadual Pedra Azul", "APA Mestre Álvaro"],
-    "correta": "Reserva Biológica de Duas Bocas"
+    "correta": "APA Mestre Álvaro"
   },
   {
     "id": 10,
@@ -70,12 +70,6 @@
     "pergunta": "Quantos distritos tem o município de Fundão?",
     "opcoes": ["2", "5", "3", "4"],
     "correta": "3"
-  },
-  {
-    "id": 13,
-    "pergunta": "Qual é o nome de uma tradicional escola pública localizada na sede de Fundão?",
-    "opcoes": ["Colégio Presidente Kennedy", "Escola Estadual Pedro Nolasco", "Escola Estadual Arthur da Costa e Silva", "Escola Nossa Senhora das Graças"],
-    "correta": "Escola Estadual Arthur da Costa e Silva"
   },
   {
     "id": 14,
@@ -111,7 +105,7 @@
     "id": 19,
     "pergunta": "Qual padroeiro é homenageado na principal festa religiosa da cidade?",
     "opcoes": ["São Pedro", "São José", "Santo Antônio", "São Sebastião"],
-    "correta": "São José"
+    "correta": "São Sebastião"
   },
   {
     "id": 20,
