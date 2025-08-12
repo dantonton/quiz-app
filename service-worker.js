@@ -11,7 +11,7 @@ const ASSETS_TO_CACHE = [
   '/quiz-app/assets/ntux/6.png',
   '/quiz-app/assets/ntux/7.png',
   '/quiz-app/assets/ntux/8.png',
-  '/quiz-app/assets/ntux/NTUX_SIMPOSIO_2025.pdf.pdf-1.png',
+  '/quiz-app/assets/ntux/9.png',
   // adicione todas as imagens e sons que o jogo usa
 ];
 
