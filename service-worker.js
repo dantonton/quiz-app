@@ -3,15 +3,10 @@ const ASSETS_TO_CACHE = [
   '/quiz-app/',
   '/quiz-app/index.html',
   '/quiz-app/manifest.json',
-  '/quiz-app/assets/ntux/1.png',
-  '/quiz-app/assets/ntux/2.png',
-  '/quiz-app/assets/ntux/3.png',
-  '/quiz-app/assets/ntux/4.png',
-  '/quiz-app/assets/ntux/5.png',
-  '/quiz-app/assets/ntux/6.png',
-  '/quiz-app/assets/ntux/7.png',
-  '/quiz-app/assets/ntux/8.png',
-  '/quiz-app/assets/ntux/9.png',
+  '/quiz-app/assets/sesisaude/1.png',
+  '/quiz-app/assets/sesisaude/12.png',
+  '/quiz-app/assets/sesisaude/13.png',
+  '/quiz-app/assets/sesisaude/quiz.png',
   // adicione todas as imagens e sons que o jogo usa
 ];
 
