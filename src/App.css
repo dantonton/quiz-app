@@ -1,42 +1,25 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+.start-cta { font-size: 2rem; background: rgba(0,0,0,.5); padding: 1rem 2rem; border-radius: 12px; }
+
+.start-form {
+  margin-top: 8.6rem;
+  width: min(680px, 92vw);
+  display: flex;
+  flex-direction: column;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.form-row { display: flex; flex-direction: column; }
+
+.start-form input {
+  padding: 0;
+  margin: 2rem 0;
+  height: 4rem;
+  border: none;
+  background: rgba(255,255,255, 0);
+  color: #eee;
+  font-size: 2rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+.form-hint { font-size: .95rem; opacity: .9; margin-top: .25rem; }
+.form-hint.ok { color: #7CFC00; }
+.form-hint.ko { color: #ffd166; }

@@ -1,16 +1,11 @@
 // src/context/QuizContext.jsx
 import { createContext, useContext, useState, useEffect, type ReactNode } from 'react'
-import perguntasJson from '../assets/assets1/perguntas.json'
+import { useSearchParams } from 'react-router-dom'
+import { allQuiz, type Question } from '../models/Quiz'
 
-export interface Pergunta {
-  id: number
-  pergunta: string
-  opcoes: string[]
-  correta: string
-}
 
 interface QuizContextType {
-  pergunta?: Pergunta
+  pergunta?: Question
   perguntaAtual: number
   avancarPergunta: (acertou : boolean) => void
   resetQuiz: () => void
@@ -25,18 +20,23 @@ function embaralhar<T>(array: T[]): T[] {
 }
 
 export const QuizProvider = ({ children }: { children: ReactNode }) => {
-  const [perguntas, setPerguntas] = useState<Pergunta[]>([])
+  const [searchParams] = useSearchParams();
+  const gameKey = searchParams.get("game") ?? '';
+  // Se allQuiz é uma função que recebe baseUrl:
+  const gameConfig = allQuiz(import.meta.env.BASE_URL)[gameKey];
+  
+  const [perguntas, setPerguntas] = useState<Question[]>([])
   const [perguntaAtual, setPerguntaAtual] = useState<number>(0)
   const [erros, setErros] = useState<number>(0)
 
   useEffect(() => {
     // Sorteia 5 perguntas diferentes ao iniciar
-    const sorteadas = embaralhar(perguntasJson).slice(0, 5)
+    const sorteadas = embaralhar(gameConfig.questions).slice(0, 5)
     setPerguntas(sorteadas)
   }, [])
 
   const resetQuiz = () => {
-    const sorteadas = embaralhar(perguntasJson).slice(0, 5)
+    const sorteadas = embaralhar(gameConfig.questions).slice(0, 5)
     setPerguntas(sorteadas)
     setPerguntaAtual(0)
     setErros(0)
