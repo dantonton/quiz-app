@@ -3,18 +3,10 @@ const ASSETS_TO_CACHE = [
   '/quiz-app/',
   '/quiz-app/index.html',
   '/quiz-app/manifest.json',
-  '/quiz-app/assets/misturacapixaba/02.png',
-  '/quiz-app/assets/misturacapixaba/03.png',
-  '/quiz-app/assets/misturacapixaba/05.png',
-  '/quiz-app/assets/misturacapixaba/04.png',
-  '/quiz-app/assets/misturacapixaba/cards/Prancheta 1.png',
-  '/quiz-app/assets/misturacapixaba/cards/Prancheta 2.png',
-  '/quiz-app/assets/misturacapixaba/cards/Prancheta 3.png',
-  '/quiz-app/assets/misturacapixaba/cards/Prancheta 4.png',
-  '/quiz-app/assets/misturacapixaba/cards/Prancheta 5.png',
-  '/quiz-app/assets/misturacapixaba/cards/Prancheta 6.png',
-  '/quiz-app/assets/misturacapixaba/cards/Prancheta 7.png',
-  '/quiz-app/assets/misturacapixaba/cards/Prancheta 8.png',
+  '/quiz-app/assets/sesisaude/1.png',
+  '/quiz-app/assets/sesisaude/12.png',
+  '/quiz-app/assets/sesisaude/13.png',
+  '/quiz-app/assets/sesisaude/quiz.png',
 ];
 
 // Instala e salva no cache
