@@ -298,7 +298,7 @@ export default function App() {
     <div className="container" onClick={handleScreenClick}>
       {gameState === 'start' && <div className="screen fundo inicio" style={{ backgroundImage: `url(${gameConfig.startBackground})` }}>
       {!gameConfig.requiresForm ? (
-            <div className="start-cta">Clique ou Enter para começar</div>
+            <div></div>
           ) : (
             <div className="start-form" onClick={(e) => e.stopPropagation()}>
               <div className={`form-row ${activeField === 'name' ? 'active' : ''}`}>

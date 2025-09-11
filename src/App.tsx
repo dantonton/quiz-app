@@ -10,8 +10,8 @@ export default function App() {
     <HashRouter>
       <Routes>
         <Route path="/" element={<div>🏠 Tela Inicial</div>} />
-        <Route path="/memoria" element={<MemoryGame />} />
-        <Route path="/institucional" element={<Institucional />} />
+        <Route path="/quiz-app/#quiz?game=sesisaude" element={<MemoryGame />} />
+        <Route path="/#quiz?game=sesisaude" element={<Institucional />} />
         <Route path="/quiz" element={<QuizProvider><Pergunta /></QuizProvider>} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>

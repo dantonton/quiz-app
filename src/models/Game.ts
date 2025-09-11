@@ -33,6 +33,26 @@ export const allGames = (baseUrl: string): {[key:string] : Game} => {
             winBackground: `${baseUrl}/assets/sicredi/16.jpg`,
             failBackground: `${baseUrl}/assets/sicredi/17.jpg`,
         },
+        misturacapixaba:  {
+            name: 'misturacapixaba',
+            time: 90,
+            requiresForm: false,
+            cardsUrl: [
+                `${baseUrl}/assets/misturacapixaba/cards/Prancheta 4.png`,
+                `${baseUrl}/assets/misturacapixaba/cards/Prancheta 5.png`,
+                `${baseUrl}/assets/misturacapixaba/cards/Prancheta 6.png`,
+                `${baseUrl}/assets/misturacapixaba/cards/Prancheta 7.png`,
+                `${baseUrl}/assets/misturacapixaba/cards/Prancheta 8.png`,
+                `${baseUrl}/assets/misturacapixaba/cards/Prancheta 1.png`,
+                `${baseUrl}/assets/misturacapixaba/cards/Prancheta 2.png`,
+                `${baseUrl}/assets/misturacapixaba/cards/Prancheta 3.png`,
+            ],
+            cardUrlBack: `${baseUrl}/assets/misturacapixaba/cards/Prancheta 9.png`,
+            startBackground: `${baseUrl}/assets/misturacapixaba/02.png`,
+            playingBackground: `${baseUrl}/assets/misturacapixaba/05.png`,
+            winBackground: `${baseUrl}/assets/misturacapixaba/03.png`,
+            failBackground: `${baseUrl}/assets/misturacapixaba/04.png`,
+        },
     }
 }
 
